@@ -7,7 +7,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "prepare": "husky install"
   },
   "dependencies": {
     "react": "^17.0.2",
@@ -24,6 +25,17 @@
     "@storybook/testing-library": "^0.0.9",
     "@vitejs/plugin-react": "^1.0.7",
     "babel-loader": "^8.2.3",
+    "eslint": "^8.11.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "husky": ">=6",
+    "lint-staged": ">=10",
     "vite": "^2.8.0"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix"
   }
 }
